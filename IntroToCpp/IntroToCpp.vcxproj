@@ -148,6 +148,7 @@
     <ClInclude Include="Accum.h" />
     <ClInclude Include="BankAccount.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Resource.h" />
     <ClInclude Include="Status.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -158,6 +159,7 @@
     <ClCompile Include="BankAccount.cpp" />
     <ClCompile Include="IntroToCpp.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Resource.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
