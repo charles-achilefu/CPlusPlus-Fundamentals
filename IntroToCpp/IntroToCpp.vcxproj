@@ -145,6 +145,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Accum.h" />
+    <ClInclude Include="BankAccount.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Status.h" />
     <ClInclude Include="stdafx.h" />
@@ -152,6 +154,8 @@
     <ClInclude Include="Tweeter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Accum.cpp" />
+    <ClCompile Include="BankAccount.cpp" />
     <ClCompile Include="IntroToCpp.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="stdafx.cpp">
