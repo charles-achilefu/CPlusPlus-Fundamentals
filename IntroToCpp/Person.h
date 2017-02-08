@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include <memory>
-#
 #include "Resource.h"
 
 
@@ -29,7 +28,7 @@ public:
 	Person operator+(Person& P);
 	friend bool operator<(int Int, const Person& P);
 	void AddResource();
-
+	std::string GetResourceName() const { return pResource->GetName(); }
 
 	
 };

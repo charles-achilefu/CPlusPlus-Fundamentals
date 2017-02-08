@@ -34,7 +34,7 @@ using namespace std;
 			- Copy Assignment Operator
 			- Destructor
 
-		- Easy memory management:
+		- Easy memory management: (NO RULE OF THREE !!!)
 			- smart pointers
 
 */
@@ -56,6 +56,10 @@ int main()
 	Person Kate2 = Kate;
 	Kate = Kate2;
 
+	std::string s1 = Kate.GetResourceName();
+	cout << endl;
+	cout << s1 << endl;
+	cout << endl;
     return 0;
 }
 
