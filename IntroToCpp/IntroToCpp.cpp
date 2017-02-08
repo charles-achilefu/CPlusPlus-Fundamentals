@@ -52,7 +52,7 @@ int main()
 	Kate.AddResource();
 	Kate.SetFirstName("Kate2");
 	Kate.AddResource();
-
+	//
 	Person Kate2 = Kate;
 	Kate = Kate2;
 
