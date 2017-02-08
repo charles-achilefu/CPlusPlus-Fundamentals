@@ -3,35 +3,9 @@
 #include <iostream>
 
 Person::Person(std::string FirstNameToSet, std::string LastNameToSet, int ArbitraryNumberToSet) :
-	FirstName(FirstNameToSet), LastName(LastNameToSet), ArbitraryNumber(ArbitraryNumberToSet), pResource(nullptr)
+	FirstName(FirstNameToSet), LastName(LastNameToSet), ArbitraryNumber(ArbitraryNumberToSet)
 {
 	//std::cout << "Constructing " << FirstName << " " << LastName << std::endl;
-}
-
-Person::Person(const Person& p) :
-	FirstName(p.FirstName), LastName(p.LastName), ArbitraryNumber(p.ArbitraryNumber),
-	pResource(new Resource(p.pResource->GetName()))
-{
-
-}
-
-Person& Person::operator=(const Person& p)
-{
-	FirstName = p.FirstName;
-	LastName = p.LastName;
-	ArbitraryNumber = p.ArbitraryNumber;
-
-	// delete old pResource !!!
-	delete pResource;
-
-	pResource = new Resource(p.pResource->GetName());
-	return *this;
-}
-
-Person::~Person()
-{
-	//std::cout << "Destructing " << FirstName << " " << LastName << std::endl;
-	delete pResource; // no checking (nullptr initialization require)
 }
 
 bool Person::operator<(const Person& P1) const
@@ -46,8 +20,8 @@ bool Person::operator<(int Int) const
 
 void Person::AddResource()
 {
-	delete pResource;
-	pResource = new Resource("Resource for " + GetName());
+	pResource.reset();
+	pResource = std::make_shared<Resource>("Resource for " + GetName());
 }
 
 Person Person::operator+(Person& p)

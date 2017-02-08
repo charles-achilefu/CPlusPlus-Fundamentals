@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <memory>
+#
 #include "Resource.h"
 
 
@@ -12,14 +13,11 @@ private:
 	std::string FirstName;
 	std::string LastName;
 	int ArbitraryNumber;
-	Resource* pResource;
-
+	std::shared_ptr<Resource> pResource;
+	
 public:
 
 	Person(std::string FirstNameToSet, std::string LastNameToSet, int ArbitraryNumberToSet);
-	Person(const Person& p);
-	Person& operator=(const Person& p);
-	~Person();
 
 	std::string GetName() const { return FirstName + " " + LastName; }
 	int GetNumber() const { return ArbitraryNumber; }

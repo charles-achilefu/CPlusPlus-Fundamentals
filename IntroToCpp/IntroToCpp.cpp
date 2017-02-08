@@ -34,6 +34,9 @@ using namespace std;
 			- Copy Assignment Operator
 			- Destructor
 
+		- Easy memory management:
+			- smart pointers
+
 */
 
 template <class T>
