@@ -23,7 +23,8 @@ using namespace std;
 
 	- Templates
 		- Template function
-		= Template class
+		- Template class
+		- Template specializations
 */
 
 template <class T>
@@ -55,7 +56,14 @@ int main()
 	strings += "Hello";
 	strings += " World";
 	cout << strings.GetTotal() << endl;
+  
+//	Person start("", "", 0);
+	Accum<Person> People(0);
+ 	People += p1;
+ 	People += p2;
+	cout << People.GetTotal() << endl;
 	
+
     return 0;
 }
 

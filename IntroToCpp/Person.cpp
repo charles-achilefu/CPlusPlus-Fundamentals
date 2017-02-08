@@ -24,6 +24,11 @@ bool Person::operator<(int Int)
 }
 
 
+Person Person::operator+(Person& p)
+{
+	return Person("", "", ArbitraryNumber + p.GetNumber());
+}
+
 bool operator<(int Int, Person& P)
 {
 	return Int < P.ArbitraryNumber;

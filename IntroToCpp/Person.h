@@ -15,6 +15,7 @@ public:
 
 	bool operator<(Person& P);
 	bool operator<(int Int);
+	Person operator+(Person& P);
 
 	friend bool operator<(int Int, Person& P);
 	
