@@ -60,27 +60,22 @@ T max(T& t1, T& t2)
 int main()
 {
 	
-	Person* Kate = new Person("Kate", "Gregory", 456);
-	Tweeter* KateGregons = new Tweeter("Kate", "Gregory", 567, "@gregcons");
+	Tweeter t("Kate", "Gregory", 123, "@tw");
+	Person* p = &t;
+	Tweeter* pt = static_cast<Tweeter*>(p);
 
-	Person* pKateGregCons = KateGregons;
+	// bad idea to use (Tweeter*)
+	// int i = 3;
+	// Tweeter* pi = (Tweeter*)&i;
+	// Tweeter* pi = static_cast<Tweeter*>(&i); // COMPILE TIME ERROR !
+	// Tweeter* pi = dynamic_cast<Tweeter*>(&i); // COMPILE TIME ERROR ! int is not a user type 
+	// cout << pi->GetName() << endl;
 
-	cout << Kate->GetName() << endl;
-	cout << KateGregons->GetName() << endl;
-	cout << pKateGregCons->GetName() << endl;
+	//Resource f("local");
+	//Tweeter* pi = dynamic_cast<Tweeter*>(&f); // COMPILE TIME ERROR ! is not a polymorphic type
+	//cout << pi->GetName() << endl;
 
-	delete KateGregons;
-
-	std::shared_ptr<Person> spKate = std::make_shared<Tweeter>("SKate", "PGregory", 456, "@twetter");
-	cout << spKate->GetName() << endl;
-
-	// slicing example
-	Person LocalP("Local", "Person", 333);
-	//Tweeter LocalT = LocalP;
-	Tweeter LocalT2("Local", "Tweeter", 444, "@local");
-
-	Person& LocalP2 = LocalT2; // or std::shared_ptr<>
-	cout << LocalP2.GetName() << endl;
+	cout << pt->GetName() << endl;
 	
     return 0;
 }
