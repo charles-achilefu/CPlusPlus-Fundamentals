@@ -28,7 +28,7 @@ private:
 public:
 
 	Accum(int start) : total(start) {}
-	int operator+=(Person& t) { return total = total + t.GetNumber(); }
+	//int operator+=(Person& t) { return total = total + t.GetNumber(); }
 	int GetTotal() { return total; }
 };
 

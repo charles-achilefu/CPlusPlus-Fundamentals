@@ -5,15 +5,15 @@
 class Tweeter : public Person
 {
 
+private:
+
+	std::string TwitterHandle;
+
 public:
 
 	Tweeter(std::string FirstNameToSet, std::string LastNameToSet, 
 		int ArbitraryNumberToSet, std::string TwitterHandleToSet);
 	~Tweeter();
-
-private:
-
-	std::string TwitterHandle;
-
+	std::string GetName() const;
 };
 
